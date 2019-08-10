@@ -1,0 +1,46 @@
+<h1>Sprint Matrix</h1>
+<h4>Velocity Matrix</h4>
+
+<div class="row" *ngIf="velocityForecast">
+    <div style="display: block">
+        <canvas baseChart
+                [datasets]="velocityForecast.weatherList"
+                [labels]="velocityForecast.chartLabels"
+                [options]="chartOptions"
+                [legend]="chartLegend"
+                [chartType]="chartType"></canvas>
+    </div>
+</div>
+<h4>Priority Matrix</h4>
+<div class="row" *ngIf="priorityForecastModel">
+    <div style="display: block">
+        <canvas baseChart
+                [datasets]="priorityForecastModel.weatherList"
+                [labels]="priorityForecastModel.chartLabels"
+                [options]="chartOptions"
+                [legend]="chartLegend"
+                [chartType]="chartType"></canvas>
+    </div>
+</div>
+<h4>Accepted Committed Matrix</h4>
+<div class="row" *ngIf="acceptedForecastModel">
+    <div style="display: block">
+        <canvas baseChart
+                [datasets]="acceptedForecastModel.weatherList"
+                [labels]="acceptedForecastModel.chartLabels"
+                [options]="chartOptions"
+                [legend]="chartLegend"
+                [chartType]="chartType"></canvas>
+    </div>
+</div>
+<h4>Scope Change</h4>
+<div class="row" *ngIf="scopechangeForecastModel">
+    <div style="display: block">
+        <canvas baseChart
+                [datasets]="scopechangeForecastModel.weatherList"
+                [labels]="scopechangeForecastModel.chartLabels"
+                [options]="chartOptions"
+                [legend]="chartLegend"
+                [chartType]="chartType"></canvas>
+    </div>
+</div> 
